@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Utility styles -->
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/components/button.css" />
+    <link rel="stylesheet" href="css/components/text-content.css" />
+    <link rel="stylesheet" href="css/components/popups.css" />
+
+    <!-- Section styles -->
+    <link rel="stylesheet" href="css/pages/dashboard/dashboard.css" />
+    <title>Profil - BALIASRI</title>
+  </head>
+  <body>
+    <header class="top-header">
+      <h2 class="mont-alt">BALIASRI</h2>
+      <div class="user-name">Hallo, Budi!</div>
+    </header>
+
+    <div class="container">
+      <section class="main-cards">
+        <div
+          class="main-card"
+          style="
+            background: linear-gradient(
+              to right,
+              rgba(189, 201, 254, 0.467) 0%,
+              #fff 100%
+            );
+          "
+        >
+          <div
+            class="icon"
+            style="font-size: 2.5rem; margin-bottom: 0.5rem; color: #ff8c1d"
+          >
+            <i class="fa-solid fa-user-circle"></i>
+          </div>
+          <h3>Nama Pengguna</h3>
+          <p class="saldo">I Wayan Budi</p>
+        </div>
+      </section>
+
+      <section class="promo">
+        <h3>Informasi Akun</h3>
+        <div class="promo-card">
+          <h4>Email</h4>
+          <p>wayanbudi@example.com</p>
+        </div>
+        <div class="promo-card">
+          <h4>No. Telepon</h4>
+          <p>+62 812 3456 7890</p>
+        </div>
+        <div class="promo-card">
+          <h4>Alamat</h4>
+          <p>Jl. Melati No. 12, Denpasar</p>
+        </div>
+      </section>
+
+      <section class="promo">
+        <h3>Pengaturan</h3>
+        <div class="promo-card">
+          <h4>Edit Profil</h4>
+          <p>Ubah nama, email, dan informasi pribadi</p>
+        </div>
+        <div class="promo-card">
+          <h4>Keamanan</h4>
+          <p>Ubah kata sandi dan pengaturan keamanan</p>
+        </div>
+        <div onclick="window.href = 'index.html'" class="promo-card">
+          <h4>Keluar</h4>
+          <p>Log out dari akun Anda</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bottom Nav -->
+    <nav class="bottom-nav">
+      <a href="dashboard.html"
+        ><i class="fa-solid fa-house"></i><br />Beranda</a
+      >
+      <a href="profile.html" class="active"><i class="fa-solid fa-user"></i><br />Profil</a>
+      <a href="index.html"><i class="fa-solid fa-right-from-bracket"></i><br />Log Out</a>
+    </nav>
+
+    <!-- Scripts -->
+    <script
+      src="https://kit.fontawesome.com/16e6e10afa.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

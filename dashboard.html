@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Utility styles -->
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/components/button.css" />
+    <link rel="stylesheet" href="css/components/text-content.css" />
+    <link rel="stylesheet" href="css/components/popups.css" />
+
+    <!-- Section styles -->
+    <link rel="stylesheet" href="css/pages/dashboard/dashboard.css" />
+    <title>Dashboard - BALIASRI</title>
+  </head>
+  <body>
+    <!-- Header different from the home page lol -->
+    <header class="top-header">
+      <h2 class="mont-alt">BALIASRI</h2>
+      <div class="user-name">Hallo, Budi!</div>
+    </header>
+
+    <div class="container">
+      <section class="main-cards">
+        <div
+          style="
+            background: linear-gradient(
+              to right,
+              rgba(189, 201, 254, 0.467) 0%,
+              rgba(255, 255, 255, 1) 100%
+            );
+          "
+          class="main-card"
+        >
+          <h3>Saldo Reward</h3>
+          <p class="saldo">Rp 50.000</p>
+        </div>
+
+        <div
+          style="
+            background: linear-gradient(
+              to right,
+              rgba(161, 255, 123, 0.467) 0%,
+              rgba(255, 255, 255, 1) 100%
+            );
+          "
+          class="main-card"
+        >
+          <h3>Total Setoran</h3>
+          <p class="saldo">15 Kg</p>
+        </div>
+
+        <div
+          style="
+            background: linear-gradient(
+              to right,
+              rgba(255, 226, 123, 0.467) 0%,
+              rgba(255, 255, 255, 1) 100%
+            );
+          "
+          class="main-card"
+        >
+          <h3>Setoran Terakhir</h3>
+          <p class="saldo">10 Oktober 2025</p>
+        </div>
+      </section>
+      <section class="quick-actions">
+        <div id="openPopup" class="action">
+          <div class="icon">
+            <i style="color: green" class="fa-solid fa-recycle"></i>
+          </div>
+          <p id="setorLabel">Setor</p>
+        </div>
+        <div class="action" id="goToRewards">
+          <div class="icon">
+            <i style="color: rgb(255, 154, 3)" class="fa-solid fa-award"></i>
+          </div>
+          <p>Rewards</p>
+        </div>
+        <div id="openHistory" class="action">
+          <div class="icon">
+            <i style="color: rgb(59, 40, 230)" class="fa-solid fa-calendar"></i>
+          </div>
+          <p>Riwayat</p>
+        </div>
+      </section>
+      <section class="promo">
+        <h3>Rekomendasi Untukmu</h3>
+        <div
+          class="promo-card"
+          data-reward="Gratis Ongkir E-Commerce Tp (200 poin)"
+        >
+          <h4>Gratis Ongkir E-Commerce Tp</h4>
+          <p>Tukar dengan 200 poin</p>
+        </div>
+        <div
+          class="promo-card"
+          data-reward="Gratis Ongkir E-Commerce Shp (200 poin)"
+        >
+          <h4>Gratis Ongkir E-Commerce Shp</h4>
+          <p>Tukar dengan 200 poin</p>
+        </div>
+        <div
+          class="promo-card"
+          data-reward="Diskon 10% Begul Bu Rahayu (100 poin)"
+        >
+          <h4>Diskon 10% Begul Bu Rahayu</h4>
+          <p>Tukar dengan 100 poin</p>
+        </div>
+        <div
+          class="promo-card"
+          data-reward="Diskon 10% RM. Pak Rahmat (100 poin)"
+        >
+          <h4>Diskon 10% RM. Pak Rahmat</h4>
+          <p>Tukar dengan 100 poin</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Bot nav thing -->
+    <nav class="bottom-nav">
+      <a href="dashboard.html" class="active"
+        ><i class="fa-solid fa-house"></i><br />Beranda</a
+      >
+      <a href="profile.html"><i class="fa-solid fa-user"></i><br />Profil</a>
+      <a href="index.html"
+        ><i class="fa-solid fa-right-from-bracket"></i><br />Log Out</a
+      >
+    </nav>
+
+    <!-- Popupsssss -->
+    <div class="popup-overlay" id="popup">
+      <div class="popup-box">
+        <h3>Konfirmasi Setor</h3>
+        <p id="popupText"></p>
+        <div class="popup-actions">
+          <button id="confirmYes">Ya</button>
+          <button id="confirmNo">Batal</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-overlay" id="historyPopup">
+      <div class="popup-box">
+        <h3>Riwayat Aktivitas</h3>
+        <div
+          id="historyContent"
+          style="max-height: 200px; overflow-y: auto; text-align: left"
+        ></div>
+        <div class="popup-actions">
+          <button id="closeHistory">Tutup</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="popup-overlay" id="rewardPopup">
+      <div class="popup-box">
+        <h3>Konfirmasi Penukaran</h3>
+        <p id="rewardText"></p>
+        <div class="popup-actions">
+          <button id="confirmRewardYes">Ya</button>
+          <button id="confirmRewardNo">Batal</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts -->
+    <script
+      src="https://kit.fontawesome.com/16e6e10afa.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/components/popups.js"></script>
+    <script>
+      document.getElementById("goToRewards").onclick = function () {
+        window.location.href = "rewards.html";
+      };
+    </script>
+  </body>
+</html>

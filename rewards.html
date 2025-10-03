@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BaliAsri - Rewards</title>
+    <!-- Utility styles -->
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/components/button.css" />
+    <link rel="stylesheet" href="css/components/text-content.css" />
+    <link rel="stylesheet" href="css/components/popups.css" />
+
+    <!-- Section styles -->
+    <link rel="stylesheet" href="css/pages/dashboard/dashboard.css" />
+  </head>
+  <body>
+    <header class="top-header">
+      <h2 class="mont-alt">BALIASRI</h2>
+      <div class="user-name">Hallo, Budi!</div>
+    </header>
+
+    <div class="container">
+      <!-- Search + Filter -->
+      <section class="rewards-header">
+        <input type="text" id="searchReward" placeholder="Cari reward..." />
+        <select id="filterReward">
+          <option value="all">Semua</option>
+          <option value="ecommerce">E-Commerce</option>
+          <option value="kuliner">Kuliner</option>
+          <option value="transportasi">Transportasi</option>
+          <option value="hiburan">Hiburan</option>
+        </select>
+      </section>
+
+      <!-- List Rewards -->
+      <section id="rewardList" class="reward-list">
+        <div
+          class="reward-card"
+          data-category="ecommerce"
+          data-reward="Gratis Ongkir Shopee (200 poin)"
+        >
+          <h4>Gratis Ongkir Shopee</h4>
+          <p>200 poin</p>
+        </div>
+        <div
+          class="reward-card"
+          data-category="ecommerce"
+          data-reward="Gratis Ongkir Tokopedia (200 poin)"
+        >
+          <h4>Gratis Ongkir Tokopedia</h4>
+          <p>200 poin</p>
+        </div>
+        <div
+          class="reward-card"
+          data-category="kuliner"
+          data-reward="Diskon 10% RM Pak Rahmat (100 poin)"
+        >
+          <h4>Diskon 10% RM Pak Rahmat</h4>
+          <p>100 poin</p>
+        </div>
+        <div
+          class="reward-card"
+          data-category="kuliner"
+          data-reward="Diskon 10% Begul Bu Rahayu (100 poin)"
+        >
+          <h4>Diskon 10% Begul Bu Rahayu</h4>
+          <p>100 poin</p>
+        </div>
+        <div
+          class="reward-card"
+          data-category="transportasi"
+          data-reward="Voucher Grab Rp 10.000 (150 poin)"
+        >
+          <h4>Voucher Grab Rp 10.000</h4>
+          <p>150 poin</p>
+        </div>
+        <div
+          class="reward-card"
+          data-category="hiburan"
+          data-reward="Voucher Bioskop XXI (250 poin)"
+        >
+          <h4>Voucher Bioskop XXI</h4>
+          <p>250 poin</p>
+        </div>
+        <div
+          class="reward-card"
+          data-category="hiburan"
+          data-reward="1 Bulan Premium Spotify (300 poin)"
+        >
+          <h4>1 Bulan Premium Spotify</h4>
+          <p>300 poin</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="popup-overlay" id="popup">
+      <div class="popup-box">
+        <h3>Konfirmasi</h3>
+        <p id="popupText"></p>
+        <div class="popup-actions">
+          <button id="confirmYes">Ya</button>
+          <button id="confirmNo">Batal</button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="bottom-nav">
+      <a href="dashboard.html" class="active"
+        ><i class="fa-solid fa-house"></i><br />Beranda</a
+      >
+      <a href="profile.html"><i class="fa-solid fa-user"></i><br />Profil</a>
+      <a href="index.html"
+        ><i class="fa-solid fa-right-from-bracket"></i><br />Log Out</a
+      >
+    </nav>
+
+    <script
+      src="https://kit.fontawesome.com/16e6e10afa.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/components/rewards.js"></script>
+  </body>
+</html>

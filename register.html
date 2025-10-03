@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/default.css" />
+    <link rel="stylesheet" href="css/components/nav.css" />
+    <link rel="stylesheet" href="css/components/button.css" />
+
+    <!-- Section styles -->
+    <link rel="stylesheet" href="css/pages/account/register.css" />
+    <title>Register BALIASRI</title>
+  </head>
+  <body>
+    <header>
+      <div class="logo mont-alt">BALIASRI</div>
+      <a href="index.html" class="white-btn mont-alt">Kembali</a>
+      <a class="menu-toggle" href="index.html"
+        ><i class="fa-solid fa-house"></i
+      ></a>
+    </header>
+
+    <section class="register">
+      <div class="register-left">
+        <div class="form-box">
+          <h2>Register Akun</h2>
+          <p>Daftarkan dirimu sekarang dan jadi anggota BaliAsri</p>
+
+          <form id="registerForm">
+            <input type="text" id="name" placeholder="Nama Lengkap:" required />
+            <input
+              id="username"
+              type="text"
+              placeholder="Username / Nama Pengguna:"
+              required
+            />
+            <input type="email" id="email" placeholder="E-mail:" required />
+
+            <div class="input-group">
+              <input
+                type="password"
+                id="password"
+                placeholder="Password / Kata Sandi"
+              />
+              <button
+                type="button"
+                class="toggle-password"
+                onclick="togglePassword()"
+              >
+                <i id="eyeOpen" class="fa-solid fa-eye"></i>
+                <i
+                  id="eyeSlash"
+                  style="display: none"
+                  class="fa-solid fa-eye-slash"
+                ></i>
+              </button>
+            </div>
+
+            <button type="submit" class="btn">Daftar</button>
+          </form>
+
+          <p class="login-link">
+            Sudah memiliki akun? Menuju ke halaman
+            <a href="login.html">Login</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="register-right">
+        <img src="assets/img/register-image.png" alt="Sorting plastic" />
+      </div>
+    </section>
+
+    <script
+      src="https://kit.fontawesome.com/16e6e10afa.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="js/components/nav.js"></script>
+    <script src="js/components/passwordShow.js"></script>
+    <script src="js/functions/registerAccount.js"></script>
+  </body>
+</html>
